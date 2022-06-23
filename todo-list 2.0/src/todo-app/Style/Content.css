@@ -1,0 +1,251 @@
+.container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 88%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container .allTask, .container .newTask, .container .doingTask, .container .doneTask, .container .searchResult {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  row-gap: 15px;
+  -webkit-column-gap: 17px;
+          column-gap: 17px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container .allTask .task, .container .newTask .task, .container .doingTask .task, .container .doneTask .task, .container .searchResult .task {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 200px;
+  height: 150px;
+  padding: 5px;
+  background: #FFFFFF;
+  border: 2px solid #675BF1;
+  border-radius: 10px;
+  font-family: 'Roboto';
+  font-style: normal;
+  text-align: left;
+  overflow: hidden;
+}
+
+.container .allTask .task .title, .container .newTask .task .title, .container .doingTask .task .title, .container .doneTask .task .title, .container .searchResult .task .title {
+  margin: 8px 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.container .allTask .task .creator, .container .newTask .task .creator, .container .doingTask .task .creator, .container .doneTask .task .creator, .container .searchResult .task .creator {
+  margin: 5px 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.container .allTask .task .status, .container .newTask .task .status, .container .doingTask .task .status, .container .doneTask .task .status, .container .searchResult .task .status {
+  margin: 5px 0;
+  border-bottom: 2px solid #675BF1;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.container .allTask .task .NEW, .container .newTask .task .NEW, .container .doingTask .task .NEW, .container .doneTask .task .NEW, .container .searchResult .task .NEW {
+  color: #04BE00;
+}
+
+.container .allTask .task .DOING, .container .newTask .task .DOING, .container .doingTask .task .DOING, .container .doneTask .task .DOING, .container .searchResult .task .DOING {
+  color: #F88F14;
+}
+
+.container .allTask .task .DONE, .container .newTask .task .DONE, .container .doingTask .task .DONE, .container .doneTask .task .DONE, .container .searchResult .task .DONE {
+  color: #675BF1;
+}
+
+.container .allTask .task .description, .container .newTask .task .description, .container .doingTask .task .description, .container .doneTask .task .description, .container .searchResult .task .description {
+  margin: 5px 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.container .allTask .task span, .container .newTask .task span, .container .doingTask .task span, .container .doneTask .task span, .container .searchResult .task span {
+  display: block;
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.container .paginationButton {
+  position: relative;
+  top: 510px;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: unset;
+  margin: auto;
+}
+
+.container .paginationButton li {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  outline: 1px solid grey;
+}
+
+.container .paginationButton .previous, .container .paginationButton .next {
+  outline: unset;
+}
+
+.container .paginationButton .previous:hover, .container .paginationButton .next:hover {
+  background-color: unset;
+  color: #675bf1;
+}
+
+.container .paginationButton li:hover {
+  cursor: pointer;
+  background-color: #675bf1;
+  color: white;
+}
+
+.container .paginationButton .selected {
+  background-color: #675bf1;
+  color: white;
+}
+
+.container .paginationButton .disabled {
+  cursor: default !important;
+}
+
+.createTask, .editTask {
+  position: relative;
+  width: fit;
+  margin: 50px auto;
+}
+
+.createTask form .form-item p, .editTask form .form-item p {
+  width: 90px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  display: inline-block;
+  text-align: left;
+  color: #000000;
+}
+
+.createTask form .form-item input, .editTask form .form-item input {
+  width: 280px;
+  height: 21px;
+  border: unset;
+  border-bottom: 1px solid #3333339c;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  display: inline-block;
+  color: #333;
+}
+
+.createTask form .form-item input::-webkit-input-placeholder, .editTask form .form-item input::-webkit-input-placeholder {
+  color: #BBBB;
+}
+
+.createTask form .form-item input:-ms-input-placeholder, .editTask form .form-item input:-ms-input-placeholder {
+  color: #BBBB;
+}
+
+.createTask form .form-item input::-ms-input-placeholder, .editTask form .form-item input::-ms-input-placeholder {
+  color: #BBBB;
+}
+
+.createTask form .form-item input::placeholder, .editTask form .form-item input::placeholder {
+  color: #BBBB;
+}
+
+.createTask form .form-item span, .editTask form .form-item span {
+  display: inline-block;
+  color: red;
+}
+
+.createTask form .radio-box, .editTask form .radio-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 0 20px 0;
+}
+
+.createTask form .radio-box input, .editTask form .radio-box input {
+  display: inline;
+  width: 30px;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  margin: 5px;
+}
+
+.createTask form .radio-box label, .editTask form .radio-box label {
+  margin-right: 10px;
+}
+
+.createTask form button, .editTask form button {
+  width: 100px;
+  height: 50px;
+  margin: 0 5px;
+  background: #675BF1;
+  border: 2px solid #FFFFFF;
+  border-radius: 10px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.createTask form button:hover, .editTask form button:hover {
+  cursor: pointer;
+  background-color: #5142f3;
+}
+/*# sourceMappingURL=Content.css.map */

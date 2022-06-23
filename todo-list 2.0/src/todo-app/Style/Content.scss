@@ -1,0 +1,217 @@
+
+.container{
+   position: absolute;
+   top: 0;
+   width: 100%;
+   height: 88%;
+   box-sizing: border-box;
+
+   .allTask, .newTask, .doingTask, .doneTask, .searchResult{
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: flex-start;
+      align-content: flex-start;
+      row-gap: 15px; 
+      column-gap: 17px;
+      flex-wrap: wrap;
+   
+      .task{
+         box-sizing: border-box;
+         width: 200px;
+         height: 150px;
+         padding: 5px;
+         background: #FFFFFF;
+         border: 2px solid #675BF1;
+         border-radius: 10px;
+         font-family: 'Roboto';
+         font-style: normal;
+         text-align: left;
+         overflow: hidden;
+   
+         .title{
+            margin: 8px 0;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 16px;
+            color: #000000; 
+         }
+         .creator{
+            margin: 5px 0;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            color: #000000;
+         }
+         .status{
+            margin: 5px 0;
+            border-bottom: 2px solid #675BF1;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 16px; 
+         }
+   
+         .NEW{
+            color: #04BE00;
+         }
+         .DOING{
+            color: #F88F14;
+         }
+         .DONE{
+            color: #675BF1;
+         }
+   
+         .description{
+            margin: 5px 0;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 16px;
+            color: #000000;
+         }
+         span{
+            display: block;
+            width: 100%;
+            height: 30px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            color: #000000;
+         }
+      }
+   }
+
+   .paginationButton{
+      position: relative;
+      top: 510px;
+      list-style-type: none;
+      display: flex;
+      justify-content: space-evenly; 
+      width: fit-content;
+      padding: unset;
+      margin: auto;
+
+      li{
+         width: 20px;
+         height: 20px;
+         margin: 5px;
+         border-radius: 50%;
+         text-align: center;
+         line-height: 20px;
+         outline: 1px solid grey;
+      }
+
+      .previous, .next{
+         outline: unset;
+      }
+      .previous:hover, .next:hover{
+         background-color: unset;
+         color: #675bf1
+      }
+
+      li:hover{
+         cursor: pointer;
+         background-color: #675bf1;
+         color: white;
+      }
+
+      .selected {
+         background-color: #675bf1;
+         color: white;
+      }
+
+      .disabled{
+         cursor: default !important;
+      }
+   }
+   
+}
+
+
+.createTask, .editTask{ 
+   position: relative;
+   width: fit;
+   margin: 50px auto;
+
+   form{
+      .form-item{
+         p{
+            width: 90px;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 16px;
+            display: inline-block;
+            text-align: left;
+            color: #000000;
+         }
+
+         input{
+            width: 280px;
+            height: 21px;
+            border: unset;
+            border-bottom: 1px solid #3333339c;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            display: inline-block;
+            color: #333;
+         }
+
+         input::placeholder{
+            color: #BBBB;
+         }
+
+         span{
+            display: inline-block;
+            color: red;
+         }
+      }
+
+      .radio-box{
+         display: flex;
+         justify-content: center;
+         padding: 10px 0 20px 0;
+
+         input{
+            display: inline;
+            width: 30px;
+            transform: translateY(5px);
+            margin: 5px;
+         }
+
+         label{
+            margin-right: 10px;
+         }
+      }
+
+      button{
+         width: 100px;
+         height: 50px;
+         margin: 0 5px;
+         background: #675BF1;
+         border: 2px solid #FFFFFF;
+         border-radius: 10px;
+         color: white;
+         font-family: 'Roboto', sans-serif;
+         font-style: normal;
+         font-weight: 400;
+         font-size: 24px;
+         line-height: 28px;
+         text-align: center;
+      }
+      button:hover{
+         cursor: pointer;
+         background-color: #5142f3;
+      }
+   }
+} 
