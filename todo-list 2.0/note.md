@@ -21,3 +21,6 @@ Plan: Item view with pagination:
 
    => pageCount = 3
    setPlayerData( taskList.splice( offset, offset + perpage ) )
+   
+   
+   *todo App
